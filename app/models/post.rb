@@ -14,6 +14,7 @@ class Post < ApplicationRecord
   belongs_to :board
   validates :body, presence: true
 
+  ###
   def has_expired?
     bool = false
     expired = expires_on.to_time

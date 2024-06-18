@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post("/insert_post", { :controller => "posts", :action => "create" })
           
   # READ
+  ###
   #get("/posts", { :controller => "posts", :action => "index" })
   get "/posts" => "posts#index"
   

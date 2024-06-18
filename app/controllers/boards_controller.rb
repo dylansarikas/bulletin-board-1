@@ -8,6 +8,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    ###
     #the_id = params.fetch("path_id")
     @the_board = Board.find(params[:path_id])
 
