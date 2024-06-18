@@ -9,6 +9,7 @@ class BoardsController < ApplicationController
 
   def show
     the_id = params.fetch("path_id")
+    #board = Board.find(params[:id])
 
     matching_boards = Board.where({ :id => the_id })
 
