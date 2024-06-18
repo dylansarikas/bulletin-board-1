@@ -12,4 +12,15 @@
 #
 class Post < ApplicationRecord
   belongs_to :board
+  validates :body, presence: true
+
+  def has_expired?
+    bool = false
+    expired = expires_on.to_time
+    if self.expires_on < Time.now
+      bool = true
+    end
+    return bool
+  end
+
 end
