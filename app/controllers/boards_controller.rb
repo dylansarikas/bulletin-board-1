@@ -8,12 +8,12 @@ class BoardsController < ApplicationController
   end
 
   def show
-    the_id = params.fetch("path_id")
-    #board = Board.find(params[:id])
+    #the_id = params.fetch("path_id")
+    @the_board = Board.find(params[:path_id])
 
-    matching_boards = Board.where({ :id => the_id })
+    #matching_boards = Board.where({ :id => the_id })
 
-    @the_board = matching_boards.at(0)
+    #@the_board = matching_boards.at(0)
 
     render({ :template => "boards/show" })
   end
